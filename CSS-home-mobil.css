@@ -1,0 +1,87 @@
+body{
+    grid-template-columns: 5px auto 5px;
+    grid-template-rows: 40px auto;
+
+    background-image: url("Background/background-mobil.png");
+}
+.navigation{
+    grid-template-columns: 0 auto 0;
+}
+.icons{
+    justify-content: space-evenly;
+}
+.main{
+    grid-template-columns: auto 0px 340px 0px auto;
+    grid-template-rows: 5px 100px auto 50px auto 450px auto;
+}
+.slogan{
+    grid-template-rows: auto 20px 20px auto;
+
+    border-radius: 40px;
+    
+    background-position-x: 10px;
+    background-position-y: 5px;
+}
+.slogan1{
+    grid-template-columns: 115px 115px auto;
+}
+.slogan2{
+    grid-template-columns: 70px 107px 110px auto;
+}
+h1{
+    font-size: 14pt;
+    margin-left: 12px;
+    margin-top: 5px;
+}
+h2{
+    font-size: 16pt;
+    -webkit-text-stroke: 0.3px black;
+    margin-top: 3px;
+    margin-left: 0px;
+}
+h3{
+    font-size: 14pt;
+    margin-top: 6px;
+}
+h4{
+    font-size: 16pt;
+    -webkit-text-stroke: 0.3px black;
+    margin-top: 4px;
+}
+.logo{
+    background-image: url("Logo/logo-mobil.svg");
+}
+.introduction{
+    grid-area: G;
+
+    background-color: rgba(245,251,239,0.25);
+    border: 2px solid rgba(36,35,37,0.8);
+    border-radius: 40px;
+}
+h5{
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: lighter;
+    color: rgba(36,35,37,0.9);
+    text-align: center;
+    margin: 10px;
+    margin-top: 15px;   
+}
+.text{
+    font-size: 16pt;
+    font-weight: lighter;
+    color: rgba(36,35,37,0.9);
+    text-align: justify;
+    margin:0;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.img1, .img2, .img3, .img4{
+    border-radius: 50px;
+    transform: scale(0.9);
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover{
+    transform: scale(1.1);
+}
+

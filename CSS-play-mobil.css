@@ -1,0 +1,56 @@
+body{
+    grid-template-columns: 5px auto 5px;
+    grid-template-rows: 40px auto;
+
+    background-image: url("Background/background-mobil-scroll.png");
+}
+.navigation{
+    grid-template-columns: 0 auto 0;
+}
+.icons{
+    justify-content: space-evenly;
+}
+.img1, .img2, .img3, .img4{
+    border-radius: 50px;
+    transform: scale(0.9);
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover{
+    transform: scale(1.1);
+}
+.main{
+    grid-template-columns: 65vw auto;
+}
+.bins{
+    grid-area: Bin;
+    position: fixed;
+    display: flex;
+    
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    
+    justify-content: center;
+    
+    margin-top:20px;
+    margin-left: 64vw;
+}
+.right,.left{
+    top:40px;
+    width:5px;
+}
+.image{
+    height: 65px;
+    width: 80px;
+    margin:5px;
+}
+.gallery{
+    margin-left:20px;
+    margin-right: 5px;
+}
+#header{
+    font-size: 4vw;
+    margin-right: 20px;
+}
+.bin-surr{
+    font-size: 7.5pt;
+    font-weight: bold;
+}

@@ -1,0 +1,63 @@
+body{
+    grid-template-columns: 5px auto 5px;
+    grid-template-rows: 40px auto;
+
+    background-image: url("Background/background-mobil-scroll.png");
+}
+.navigation{
+    grid-template-columns: 0 auto 0;
+}
+.right{
+    top:40px;
+    width:5px;
+}
+.left{
+    top:40px;
+    width:5px; 
+}
+.icons{
+    justify-content: space-evenly;
+}
+.img1, .img2, .img3, .img4{
+    border-radius: 50px;
+    transform: scale(0.9);
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover{
+    transform: scale(1.1);
+}
+.main{
+    grid-template-rows: 100px 100px 50vw 100px 76vw 100px 65vw 100px 75vw 100px 78vw 110px auto 50px;
+
+}
+#header, h2, .answer, #game{
+    font-size: 4vw;
+    border-radius: 20px;
+    margin:5px;
+}
+#header{
+    font-size: 5vw;
+}
+#quest{
+    border-radius: 10px;
+    font-size: 4vw;
+    
+    top:55px;
+    left: 10px;
+    
+    height: 5vw;
+    width: 5vw;
+
+}
+#hint{
+    border-radius: 15px;
+
+    font-size: 3vw;
+    padding: 0;
+
+    top:90px;
+    left: 10px;
+
+    height: auto;
+    width: 6em;
+    padding: 3px;
+}

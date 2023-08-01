@@ -1,0 +1,269 @@
+/* na zobrazovanie a skrývanie odpovedí je použité jQuery */
+html{
+    width: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100%;
+    display: grid;
+    margin: 0;
+    padding: 0;
+        
+    grid-template-columns: 20px auto 20px;
+    grid-template-rows: 80px auto;
+
+    grid-template-areas: 
+    "A A A"
+    ". D .";
+
+    background-image: url("Background/background-scroll.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    font-family: 'Montserrat', sans-serif;
+}
+.navigation{
+    grid-area: A;
+    display: grid;
+    position: sticky;
+    top:0;
+    grid-template-columns: auto 50vw auto;
+    grid-template-areas: "nav1 icons nav2";
+    z-index: 1;
+}
+.navigation, .right, .left{ 
+    background-color: rgba(36,35,37,0.7);
+    margin:0;
+    padding: 0;
+}
+.nav1{
+    grid-area: nav1;
+}
+.nav2{
+    grid-area: nav2;
+}
+.icons{
+    grid-area: icons;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.right, .left{
+    position: fixed;
+    top:80px;
+    height: 100vh;
+    width:20px;
+}
+.right{
+    left:0px;
+}
+.left{
+    right:0px;
+}
+.main{
+    grid-area: D;
+    display: grid;
+    
+    grid-template-columns: 50px auto 50px;
+    grid-template-rows: 100px 100px 7vw 100px 10vw 100px 10vw 100px 10vw 100px 10vw 110px auto 50px;
+
+    align-items: center;
+    justify-items: center;
+
+    grid-template-areas: 
+    ". H ."
+    ". Q1 ."
+    ". A1 ."
+    ". Q2 ."
+    ". A2 ."
+    ". Q3 ."
+    ". A3 ."
+    ". Q4 ."
+    ". A4 ."
+    ". Q5 ."
+    ". A5 ."
+    ". hra ."
+    ". gal ."
+    ". . .";
+}
+#header{
+    grid-area: H;
+    color: rgba(36,35,37,1);
+    background-color: rgba(245,251,239,0.5);
+    border: 2px solid rgba(36,35,37,0.8);
+    border-radius: 25px;
+
+    font-size: 2.5vw;
+    text-align: center;
+    vertical-align: center;
+    
+    padding:1.3vw;
+    margin: 10px;
+    margin-left: 25vw;
+    margin-right: 25vw;   
+}
+#Q1{
+    grid-area: Q1;
+}
+#Q2{
+    grid-area: Q2;
+}
+#Q3{
+    grid-area: Q3;
+}
+#Q4{
+    grid-area: Q4;
+}
+#Q5{
+    grid-area: Q5;
+}
+#A1{
+    grid-area: A1;
+    display: none;
+}
+#A2{
+    grid-area: A2;
+    display: none;
+}
+#A3{
+    grid-area: A3;
+    display: none;
+}
+#A4{
+    grid-area: A4;
+    display: none;
+}
+#A5{
+    grid-area: A5;
+    display: none;
+}
+h2, .answer, #game{
+    background-color: rgba(245,251,239,0.5);
+    border: 2px solid rgba(36,35,37,0.8);
+    border-radius: 25px;
+
+    font-size: 1.4vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    
+    text-align: center;
+    vertical-align: middle;
+    
+    padding: 10px;
+    margin: 10px ;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+h2{
+    cursor:pointer;
+    transition: transform 0.5s, background-color 0.5s;
+}
+h2:hover{
+    transform: scale(1.1);
+    background-color: rgba(245,251,239,0.7);
+}
+.answer{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: justify;
+}
+#game{
+    grid-area: hra;
+}
+#gallery{
+    grid-area: gal;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.img1, .img2, .img3, .img4{
+    border-radius: 100px;
+    transform: scale(1.8);
+    transition: transform 0.3s ease;
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover{
+    transform: scale(2.2);
+}
+
+.game-img{
+    width: 225px;
+    height: 150px;
+    perspective: 1000px; 
+    margin:20px;
+}
+.inside{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 2px solid #f5fbefff;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.game-img:hover .inside{
+    transform: rotateY(180deg);
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.back{
+    background-color: #fabc3cff;
+    color: #f5fbefff;
+    transform: rotateY(180deg);
+}
+h1{ 
+    font-size: 30pt;
+    margin: 20px;
+}
+p{
+    font-size: 16pt;
+    margin: 15px;
+}
+
+#quest{
+    background-color: rgba(245,251,239,0.5);
+    border: 2px solid rgba(36,35,37,0.8);
+    border-radius: 30px;
+
+    position: absolute;
+    display: block;
+
+    font-size: 3vw;
+    left: 66vw;
+    padding: 0;
+    top:90px;
+    height: 4vw;
+    width: 4vw;
+    text-align: center;
+}
+#quest:hover{
+    cursor: pointer;
+}
+#hint{
+    background-color: rgba(245,251,239,0.5);
+    border: 2px solid rgba(36,35,37,0.8);
+    border-radius: 15px;
+
+    position: absolute;
+    display: none;
+
+    font-size: 1vw;
+    
+    padding-top: 15px;
+
+    left: 72vw;
+    top:90px;
+
+    height: 5vw;
+    width: 10vw;
+
+    text-align: center;
+}

@@ -1,0 +1,198 @@
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: grid;
+    margin: 0;
+    padding: 0;
+        
+    grid-template-columns: 20px auto 20px;
+    grid-template-rows: 80px auto;
+
+    grid-template-areas: 
+    "A A A"
+    "B D C";
+
+    background-image: url("Background/background.png");
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    font-family: 'Montserrat', sans-serif;
+}
+.navigation{
+    grid-area: A;
+    display: grid;
+    grid-template-columns: auto 50vw auto;
+
+    grid-template-areas: "nav1 icons nav2";
+}
+.nav1, .nav2, .icons, .right, .left{ 
+    background-color: rgba(36,35,37,0.7);
+    margin:0;
+    padding: 0;
+}
+.nav1{
+    grid-area: nav1;
+}
+.nav2{
+    grid-area: nav2;
+}
+.icons{
+    grid-area: icons;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.right{
+    grid-area: B;
+}
+.left{
+    grid-area: C;
+}
+.main{
+    grid-area: D;
+    display: grid;
+    
+    grid-template-columns: auto 10vw 800px 10vw auto;
+    grid-template-rows: 10px 250px auto 175px auto 200px 6px;
+
+    grid-template-areas: 
+    ". . . . ."
+    ". . E . ."
+    ". . . . ."
+    ". . F . ."
+    ". . . . ."
+    ". G G G ."
+    ". . . . .";
+}
+.slogan{
+    grid-area: E;
+    display: grid;
+
+    grid-template-rows: auto 60px 60px auto;
+    grid-template-columns: auto;
+
+    grid-template-areas: 
+    "."
+    "H"
+    "I"
+    ".";
+
+    background-color: rgba(245,251,239,0.25);
+    border: 2px solid rgba(36,35,37,0.8);
+    border-radius: 80px;
+    background-image: url("Background/slogan-background.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+    background-position-y: 15px;
+}
+.slogan1, .slogan2, h1, h2, h3, h4{
+    padding: 0;
+    margin: 0;
+}
+.slogan1{
+    grid-area: H;
+    display: grid;
+
+    grid-template-columns: 270px 300px auto;
+
+    grid-template-areas: "J K";
+}
+.slogan2{
+    grid-area: I;
+    display: grid;
+
+    grid-template-columns: 190px 255px 300px auto;
+
+    grid-template-areas: ". L M";
+}
+h1{
+    grid-area: J;
+
+    text-transform: uppercase;
+    font-size: 32pt;
+    font-weight: lighter;
+    color: rgba(36,35,37,0.9);
+    
+    margin-left: 50px;
+    margin-top: 23px;
+}
+h3{
+    grid-area: L;
+
+    text-transform: uppercase;
+    font-size: 32pt;
+    font-weight: lighter;
+    color: rgba(36,35,37,0.9);
+    
+    margin-top: 7px;
+}
+h2{
+    grid-area: K;
+
+    text-transform: uppercase;
+    font-size: 40pt;
+    font-weight: bold;
+    color: rgba(64,160,106,1);
+    -webkit-text-stroke: 1px black;
+
+    margin-top: 14px;
+    margin-left: 20px;
+}
+h4{
+    grid-area: M;
+
+    text-transform: uppercase;
+    font-size: 40pt;
+    font-weight: bold;
+    color: rgba(238,47,51,1);
+    -webkit-text-stroke: 1px black;
+}
+.logo{
+    grid-area: F;
+
+    background-image: url("Logo/logo.svg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.introduction{
+    grid-area: G;
+
+    background-color: rgba(245,251,239,0.25);
+    border: 2px solid rgba(36,35,37,0.8);
+    border-radius: 80px;
+}
+h5{
+    text-transform: uppercase;  
+    font-size: 30pt;
+    font-weight: lighter;
+    color: rgba(36,35,37,0.9);
+    text-align: center;
+    margin: 10px;
+    margin-top: 10px;   
+    margin-bottom: 0;
+}
+.text{
+    font-size: 1.5vw;
+    font-weight: lighter;
+    color: rgba(36,35,37,0.9);
+    text-align: justify;
+    margin:0;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+.img1, .img2, .img3, .img4{
+    border-radius: 100px;
+    transform: scale(1.8);
+    transition: transform 0.3s ease;
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover{
+    transform: scale(2.2);
+}
